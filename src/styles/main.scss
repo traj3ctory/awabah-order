@@ -1,0 +1,25 @@
+div.card_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  div.card_list {
+    border: 1px solid #eee;
+    border-radius: 0.25rem;
+    padding: 0.6rem;
+    margin: 0.6rem;
+    min-width: 7rem;
+    text-align: center;
+    background-color: #f5f5f5;
+    box-shadow: 0.5rem 0.5rem 0.5rem #ddd;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      background-color: #eee;
+      transform: scale(0.95);
+    }
+    p.item_size{
+        text-transform: capitalize;
+    }
+  }
+}

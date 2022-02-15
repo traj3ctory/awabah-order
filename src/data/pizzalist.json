@@ -1,0 +1,77 @@
+[
+    {
+        "type": "Margarita",
+        "quantity": 20,
+        "size": "small"
+    },
+    {
+        "type": "Margarita",
+        "quantity": 100,
+        "size": "medium"
+    },
+    {
+        "type": "Margarita",
+        "quantity": 200,
+        "size": "large"
+    },
+    {
+        "type": "Pepperoni",
+        "quantity": 40,
+        "size": "small"
+    },
+    {
+        "type": "Pepperoni",
+        "quantity": 20,
+        "size": "medium"
+    },
+    {
+        "type": "Pepperoni",
+        "quantity": 100,
+        "size": "large"
+    },
+    {
+        "type": "Veggie",
+        "quantity": 40,
+        "size": "small"
+    },
+    {
+        "type": "Veggie",
+        "quantity": 20,
+        "size": "medium"
+    },
+    {
+        "type": "Veggie",
+        "quantity": 100,
+        "size": "large"
+    },
+    {
+        "type": "Hawaiian",
+        "quantity": 40,
+        "size": "small"
+    },
+    {
+        "type": "Hawaiian",
+        "quantity": 20,
+        "size": "medium"
+    },
+    {
+        "type": "Hawaiian",
+        "quantity": 100,
+        "size": "large"
+    },
+    {
+        "type": "Supreme",
+        "quantity": 40,
+        "size": "small"
+    },
+    {
+        "type": "Supreme",
+        "quantity": 20,
+        "size": "medium"
+    },
+    {
+        "type": "Supreme",
+        "quantity": 100,
+        "size": "large"
+    }
+]
