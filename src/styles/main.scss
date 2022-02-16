@@ -1,25 +1,217 @@
-div.card_container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  div.card_list {
-    border: 1px solid #eee;
-    border-radius: 0.25rem;
-    padding: 0.6rem;
-    margin: 0.6rem;
-    min-width: 7rem;
-    text-align: center;
-    background-color: #f5f5f5;
-    box-shadow: 0.5rem 0.5rem 0.5rem #ddd;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
-    &:hover {
-      background-color: #eee;
-      transform: scale(0.95);
+body {
+  margin: 0;
+  div.card_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    main {
+      width: 75%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      div.card_list {
+        border: 1px solid #eee;
+        border-radius: 0.25rem;
+        padding: 0.6rem;
+        margin: 0.6rem;
+        min-width: 7rem;
+        text-align: center;
+        background-color: #f5f5f5;
+        box-shadow: 0.5rem 0.5rem 0.5rem #ddd;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          background-color: #eee;
+          transform: scale(0.985);
+        }
+        p.item_size {
+          text-transform: capitalize;
+        }
+      }
     }
-    p.item_size{
-        text-transform: capitalize;
+    div.table_container {
+      width: 25%;
+      box-shadow: -1rem 0 0.5rem #eee;
+      padding: 0 1rem;
+      background-color: #f5f5f5;
+      overflow: auto;
+      table {
+        thead {
+          tr {
+            th {
+              text-align: center;
+              padding: 0.25rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  div.pagination-button-wrapper {
+    margin-top: 2rem;
+    text-align: center;
+    button.pagination-button {
+      padding: 0.35rem 0.5rem;
+      margin: 0.5rem;
+      border-radius: 0.2rem;
+      box-shadow: 0.2rem 0.2rem 0.2rem #ddd;
+      border: none;
+      cursor: pointer;
+      &:disabled {
+        background-color: #eee;
+        cursor: none;
+      }
+    }
+  }
+
+  div.progress {
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    background-color: #eee;
+    span {
+      font-size: 0.9rem;
+      border-radius: 50%;
+      padding: 1.1rem 0.5rem;
+      background-color: #00000046;
+      color: #eee;
+      cursor: pointer;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        background-color: #265887;
+        color: #eee;
+        transform: scale(0.95);
+      }
+      &.active {
+        background-color: #265887;
+        color: #e0fee6;
+      }
+    }
+  }
+
+  // ====================================Input
+  div.form_container {
+    display: flex;
+    justify-content: center;
+    label {
+      display: none;
+    }
+    input {
+      border: 1px solid #26588724;
+      border-radius: 0.1rem;
+      background-color: #26588724;
+      padding: 1rem 0.5rem;
+      margin-bottom: 1rem;
+      border-radius: 0.25rem;
+      &:active,
+      &:focus,
+      &:focus-visible {
+        border: 0;
+        outline: 0;
+        border-bottom: 1px solid #265785;
+        box-shadow: none;
+      }
+      input {
+        color: #265785;
+        &::placeholder {
+          color: #26578572;
+        }
+      }
+    }
+  }
+  div.float-right{
+    justify-content: flex-end;
+  }
+
+  div.confirm_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    box-shadow: 0.5rem 0.1rem 0.5rem #ddd;
+    padding: 2rem 0;
+    margin-top: 2rem;
+  }
+
+  // ==================================== Button
+  button {
+    border: 1px solid #26588724;
+    background-color: #265887;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+    color: #ddd;
+    cursor: pointer;
+    &:active,
+    &:focus,
+    &:focus-visible,
+    &:hover {
+      outline: 0;
+      box-shadow: none;
+    }
+  }
+
+  // ==================================== Loader
+  div.loading {
+    min-height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10;
+    div.loader {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 10px solid #f3f3f3;
+      border-top: 10px solid #4de897;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    h6 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #136038;
+      margin-top: 1rem;
+      transition: all 0.5s ease-in-out;
+      &:after {
+        content: ".";
+        color: #4de897;
+        animation: dots 2.5s linear infinite;
+        animation-delay: 0.2s;
+      }
+    }
+    @keyframes dots {
+      0% {
+        content: ".";
+      }
+      25% {
+        content: "..";
+      }
+      50% {
+        content: "...";
+      }
+      75% {
+        content: "..";
+      }
+      100% {
+        content: ".";
+      }
     }
   }
 }

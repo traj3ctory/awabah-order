@@ -1,0 +1,8 @@
+{
+    "conventionalCommits.scopes": [
+        "project-setup"
+    ],
+    "cSpell.words": [
+        "reduxjs"
+    ]
+}

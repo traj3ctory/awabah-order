@@ -1,14 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./views/Home";
+import Order from "./views/Order";
 import Pizza from "./views/Pizza";
 import NotFound from "./components/NotFound";
-import "./styles/main.scss"
+import "./styles/main.scss";
 
 const App = () => (
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/pizza" element={<Pizza />} />
+      <Route path="/" element={<Pizza />} />
+      <Route path="/process" element={<Order />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   </BrowserRouter>

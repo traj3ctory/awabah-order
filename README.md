@@ -6,6 +6,52 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+## Project setup
+
+Install project with yarn
+
+```bash
+    git clone https://github.com/traj3ctory/awabah-order.git
+    cd awabah-pizza
+    yarn
+    yarn start
+```
+
+- How do you document your frontend code?
+```
+- Descriptive function name
+- Inline commenting
+- Readme file
+
+```
+- What are your thoughts on testing for the front-end?
+```
+    Giving the required resources the necessary test should be carried out
+```
+- What Design Patterns have you used in your frontend projects?
+```
+- Modular architecture
+```
+- What do you think about Typescript on the front-end?
+```
+- I think typescript should be used as it reduces the number of error that occurs from typing. 
+```
+- What are the most important performance issues in React web applications?
+```
+- Redundant processing in components that do not update the DOM
+- Updating leaf nodes that do not require updating
+```
+- How did you decide on the technical and architectural choices used as part of your solution?
+```
+- Redux : for global and easy state manipulation
+- Component based development: easy to debug and reusable
+```
+- Are there any improvements you could make to your submission?
+```
+- Improving the validation process in terms of restriction
+- Improved UI design
+```
+
 ### `yarn start`
 
 Runs the app in the development mode.\
