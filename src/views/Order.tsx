@@ -1,4 +1,4 @@
-import { RootStateOrAny, useSelector, useDispatch } from "react-redux";
+import { RootStateOrAny, useSelector } from "react-redux";
 import UserDetail from "./UserDetails";
 import CardData from "./CardData";
 import Confirm from "./Confirm";
