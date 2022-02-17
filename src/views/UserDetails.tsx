@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { RootStateOrAny, useSelector, useDispatch } from "react-redux";
 import { addDetails } from "../features/pizza/pizzaSlice";
 
 const UserDetail = () => {
   const dispatch = useDispatch();
+  const datar = useSelector((state: RootStateOrAny) => state.pizzas);
+  const { details } = datar;
   const [data, setData] = useState({
     lastname: "",
     firstname: "",
@@ -30,6 +32,7 @@ const UserDetail = () => {
           placeholder="Enter your lastname ..."
           autoComplete="family-name"
           onChange={(e) => handleChange(e)}
+          value={details.lastname}
           required
         />
       </div>
@@ -42,6 +45,7 @@ const UserDetail = () => {
           placeholder="Enter your firstname ..."
           autoComplete="given-name"
           onChange={(e) => handleChange(e)}
+          value={details.firstname}
           required
         />
       </div>
@@ -54,6 +58,7 @@ const UserDetail = () => {
           placeholder="Enter your email ..."
           autoComplete="email"
           onChange={(e) => handleChange(e)}
+          value={details.email}
           required
         />
       </div>
@@ -66,6 +71,7 @@ const UserDetail = () => {
           placeholder="Enter your street address ..."
           autoComplete="street-address"
           onChange={(e) => handleChange(e)}
+          value={details.street_address}
           required
         />
       </div>

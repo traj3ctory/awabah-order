@@ -215,3 +215,21 @@ body {
     }
   }
 }
+
+table{
+  tr{
+    padding-bottom: 1rem;
+    td{
+      padding: 0.5rem;
+      span.remove_item{
+        background-color: red;
+        color: white;
+        padding: 0.3rem 0.35rem;
+        border-radius: 50%;
+        text-align: center;
+        cursor: pointer;
+        font-size: 0.7rem;
+      }
+    }
+  }
+}

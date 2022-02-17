@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addCard } from "../features/pizza/pizzaSlice";
+import { addCard,updateStep } from "../features/pizza/pizzaSlice";
 
 const CardData = () => {
   const dispatch = useDispatch();
@@ -17,6 +17,9 @@ const CardData = () => {
     const { name, value } = e.target;
     setData({ ...data, [name]: value });
   };
+  const handleBack = (item: number) => {
+    dispatch(updateStep(item));
+  }
   return (
    <div className="form_container">
       <form onSubmit={handleForm}>
@@ -56,7 +59,7 @@ const CardData = () => {
           required
         />
       </div>
-      <button type="submit">{"<< "}Prev</button>
+      <button type="submit" onClick={(e) => handleBack(1)}>{"<< "}Prev</button>
       <span>{"  "}</span>
       <button type="submit">Next {" >>"}</button>
     </form>

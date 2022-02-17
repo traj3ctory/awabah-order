@@ -30,7 +30,7 @@ const OrderView = () => {
                 <td>{pizza.type}</td>
                 <td>{pizza.quantity}</td>
                 <td>{pizza.size}</td>
-                <td onClick={(e) => dispatch(removeOrder(pizza))}>x</td>
+                <td onClick={(e) => dispatch(removeOrder(pizza))} ><span className="remove_item">X</span></td>
               </tr>
             ))
           ) : (
